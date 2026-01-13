@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 
 export default function Home() {
-  redirect("/onboarding");
+  // Redirigir al login como punto de entrada
+  redirect("/login");
 }

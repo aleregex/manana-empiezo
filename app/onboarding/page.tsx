@@ -8,10 +8,11 @@ import { Step1Days } from "@/components/onboarding/step1-days";
 import { Step2Level } from "@/components/onboarding/step2-level";
 import { Step3Hours } from "@/components/onboarding/step3-hours";
 import { Step4Goal } from "@/components/onboarding/step4-goal";
+import { ProtectedRoute } from "@/components/auth/protected-route";
 
 const TOTAL_STEPS = 4;
 
-export default function OnboardingPage() {
+function OnboardingPageContent() {
   const router = useRouter();
   const {
     data,
@@ -99,5 +100,13 @@ export default function OnboardingPage() {
         />
       </div>
     </div>
+  );
+}
+
+export default function OnboardingPage() {
+  return (
+    <ProtectedRoute>
+      <OnboardingPageContent />
+    </ProtectedRoute>
   );
 }

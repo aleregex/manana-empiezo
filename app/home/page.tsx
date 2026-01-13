@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { OnboardingData } from "@/types/onboarding";
 import { LEVEL_OPTIONS, GOAL_OPTIONS } from "@/types/onboarding";
+import { ProtectedRoute } from "@/components/auth/protected-route";
 
-export default function HomePage() {
+function HomePageContent() {
   const router = useRouter();
   const [profile, setProfile] = useState<OnboardingData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -122,5 +123,13 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <ProtectedRoute>
+      <HomePageContent />
+    </ProtectedRoute>
   );
 }

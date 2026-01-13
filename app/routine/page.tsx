@@ -1,4 +1,8 @@
-export default function RoutinePage() {
+"use client";
+
+import { ProtectedRoute } from "@/components/auth/protected-route";
+
+function RoutinePageContent() {
   return (
     <div className="page-container">
       <header className="mb-8">
@@ -16,5 +20,13 @@ export default function RoutinePage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function RoutinePage() {
+  return (
+    <ProtectedRoute>
+      <RoutinePageContent />
+    </ProtectedRoute>
   );
 }

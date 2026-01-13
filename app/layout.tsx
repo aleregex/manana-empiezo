@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import BottomNavigation from "@/components/bottom-navigation";
+import { AuthProvider } from "@/lib/auth/auth-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Fierro - Tu compañero de fitness",
-  description: "Una experiencia de fitness impulsada por IA para alcanzar tus metas",
+  description:
+    "Una experiencia de fitness impulsada por IA para alcanzar tus metas",
 };
 
 export const viewport: Viewport = {
@@ -39,15 +41,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full overflow-hidden`}
       >
-        {/* Contenedor principal con scroll */}
-        <main className="h-full overflow-y-auto pb-16">
-          <div className="min-h-full w-full max-w-2xl mx-auto">
-            {children}
-          </div>
-        </main>
-        
-        {/* Navegación inferior fija */}
-        <BottomNavigation />
+        <AuthProvider>
+          {/* Contenedor principal con scroll */}
+          <main className="h-full overflow-y-auto pb-16">
+            <div className="min-h-full w-full max-w-2xl mx-auto">
+              {children}
+            </div>
+          </main>
+
+          {/* Navegación inferior fija */}
+          <BottomNavigation />
+        </AuthProvider>
       </body>
     </html>
   );
