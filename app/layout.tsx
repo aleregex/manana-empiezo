@@ -35,11 +35,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full overflow-hidden`}
       >
-        {children}
+        {/* Contenedor principal con scroll */}
+        <main className="h-full overflow-y-auto pb-16">
+          <div className="min-h-full w-full max-w-2xl mx-auto">
+            {children}
+          </div>
+        </main>
+        
+        {/* Navegación inferior fija */}
         <BottomNavigation />
       </body>
     </html>

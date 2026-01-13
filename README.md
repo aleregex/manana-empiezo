@@ -61,22 +61,48 @@ pnpm start
 
 ## 🎯 MVP - Fase de Setup
 
-### ✅ Completado
+### ✅ Fase 1: Setup del Proyecto
 
 - [x] Proyecto Next.js inicializado con TypeScript y Tailwind
 - [x] Estructura de carpetas definida (app, components, lib, types)
 - [x] Rutas básicas creadas (/onboarding, /home, /routine, /profile)
-- [x] Layout base mobile-first configurado
-- [x] Componente de navegación inferior implementado
-- [x] Configuración de viewport para móviles
+- [x] Configuración base completada
+- [x] Documentación inicial
 
-### 🔄 Próximos Pasos
+### ✅ Fase 2: Layout y Navegación Mobile-First
 
-- [ ] Implementar flujo de onboarding
-- [ ] Diseño de la página principal
-- [ ] Sistema de rutinas
-- [ ] Integración con IA
-- [ ] Autenticación de usuarios
+- [x] Layout global único definido
+- [x] Estructura mobile-first (ancho completo + scroll vertical)
+- [x] Componente BottomNavigation creado y funcional
+- [x] 3 secciones de navegación (Home, Mi Rutina, Perfil)
+- [x] Estados visuales activo/inactivo implementados
+- [x] Safe areas para iOS configuradas
+- [x] Estilos globales optimizados
+- [x] Todas las páginas actualizadas con estructura consistente
+
+### ✅ Fase 3: Onboarding (4 preguntas + persistencia local)
+
+- [x] Flujo de onboarding con 4 pasos implementado
+- [x] Paso 1: ¿Cuántos días a la semana entrenas? (1-7 días)
+- [x] Paso 2: ¿Tu nivel actual? (Principiante/Intermedio/Avanzado)
+- [x] Paso 3: ¿Cuántas horas por sesión? (0.5-3 horas)
+- [x] Paso 4: ¿Cuál es tu objetivo? (4 opciones con iconos)
+- [x] Navegación Siguiente/Atrás funcional
+- [x] Indicador de progreso (stepper) animado
+- [x] Validaciones por paso (no continuar sin selección)
+- [x] Persistencia en localStorage (auto-guardado)
+- [x] Recuperación de estado al recargar
+- [x] Redirección a /home al completar
+- [x] Dashboard personalizado con datos del usuario
+
+### 🔄 Próximos Pasos - Fase 4
+
+- [ ] Sistema de rutinas basado en el perfil
+- [ ] Biblioteca de ejercicios
+- [ ] Temporizador de entrenamientos
+- [ ] Tracking de progreso y estadísticas
+- [ ] Integración con IA para recomendaciones
+- [ ] Autenticación de usuarios con Supabase
 
 ## 🎨 Diseño
 

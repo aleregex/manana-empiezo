@@ -108,7 +108,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-}
+};
 ```
 
 ### Safe Areas para iOS
@@ -122,6 +122,7 @@ export const viewport: Viewport = {
 ### Navegación Inferior
 
 El componente `BottomNavigation` proporciona:
+
 - Navegación fija en la parte inferior
 - 3 rutas principales (Home, Rutina, Perfil)
 - Estado activo visual
@@ -156,47 +157,48 @@ pnpm lint         # Ejecuta ESLint
 
 ```typescript
 // PascalCase para componentes
-export default function BottomNavigation() { }
-export function UserProfile() { }
+export default function BottomNavigation() {}
+export function UserProfile() {}
 
 // camelCase para funciones y variables
-const getCurrentUser = () => { }
-const userName = "Juan"
+const getCurrentUser = () => {};
+const userName = "Juan";
 
 // UPPER_CASE para constantes
-const MAX_RETRIES = 3
-const API_URL = "https://api.example.com"
+const MAX_RETRIES = 3;
+const API_URL = "https://api.example.com";
 ```
 
 ### Imports
 
 ```typescript
 // 1. Imports de Node/externos
-import { useState } from "react"
-import Link from "next/link"
+import { useState } from "react";
+import Link from "next/link";
 
 // 2. Imports locales con alias
-import BottomNavigation from "@/components/bottom-navigation"
-import { formatDate } from "@/lib/utils"
+import BottomNavigation from "@/components/bottom-navigation";
+import { formatDate } from "@/lib/utils";
 
 // 3. Imports de tipos
-import type { User } from "@/types"
+import type { User } from "@/types";
 
 // 4. Imports de estilos
-import "./styles.css"
+import "./styles.css";
 ```
 
 ## 🎯 Rutas Configuradas
 
-| Ruta | Descripción | Estado |
-|------|-------------|--------|
-| `/` | Redirección a onboarding | ✅ |
-| `/onboarding` | Flujo de bienvenida | 🚧 |
-| `/home` | Dashboard principal | 🚧 |
-| `/routine` | Vista de rutinas | 🚧 |
-| `/profile` | Perfil de usuario | 🚧 |
+| Ruta          | Descripción              | Estado |
+| ------------- | ------------------------ | ------ |
+| `/`           | Redirección a onboarding | ✅     |
+| `/onboarding` | Flujo de bienvenida      | 🚧     |
+| `/home`       | Dashboard principal      | 🚧     |
+| `/routine`    | Vista de rutinas         | 🚧     |
+| `/profile`    | Perfil de usuario        | 🚧     |
 
 **Leyenda:**
+
 - ✅ Completado
 - 🚧 En desarrollo
 - ⏳ Pendiente
@@ -224,10 +226,10 @@ El alias `@/` apunta a la raíz del proyecto:
 
 ```typescript
 // ✅ Correcto
-import { Button } from "@/components/button"
+import { Button } from "@/components/button";
 
 // ❌ Evitar
-import { Button } from "../../components/button"
+import { Button } from "../../components/button";
 ```
 
 ## 🎨 VS Code Setup
@@ -240,6 +242,7 @@ Extensiones recomendadas (automáticamente sugeridas):
 4. **TypeScript Next** - Soporte TypeScript mejorado
 
 La configuración en `.vscode/settings.json` incluye:
+
 - Format on save habilitado
 - ESLint auto-fix on save
 - Tailwind IntelliSense para className
@@ -250,7 +253,7 @@ La configuración en `.vscode/settings.json` incluye:
 export const metadata: Metadata = {
   title: "Fierro - Tu compañero de fitness",
   description: "Una experiencia de fitness impulsada por IA",
-}
+};
 ```
 
 ## 📊 Build Output

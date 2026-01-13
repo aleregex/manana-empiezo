@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
+/* ============================================
+   VARIABLES CSS
+   ============================================ */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --nav-height: 4rem; /* 64px - altura de navegación */
 }
 
 @theme inline {
@@ -19,23 +23,99 @@
   }
 }
 
+/* ============================================
+   ESTILOS BASE
+   ============================================ */
+html {
+  /* Prevenir overscroll bounce en móviles */
+  overscroll-behavior: none;
+
+  /* Smooth scrolling para toda la app */
+  scroll-behavior: smooth;
+
+  /* Optimización para móvil */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
 }
 
-/* Mobile-first utilities */
+/* ============================================
+   MOBILE-FIRST UTILITIES
+   ============================================ */
+
+/* Contenedor de página estándar */
+.page-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Safe area para dispositivos con notch */
 .safe-area-inset-bottom {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* Prevent overscroll on mobile */
-html {
-  overscroll-behavior: none;
+.safe-area-inset-top {
+  padding-top: env(safe-area-inset-top);
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Focus visible para navegación por teclado */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Ocultar visualmente pero mantener accesible para screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   ANIMACIONES OPTIMIZADAS
+   ============================================ */
+
+/* Fade in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Reducir movimiento para usuarios con preferencia */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
