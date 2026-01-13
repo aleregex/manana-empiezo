@@ -1,0 +1,94 @@
+📦 fierro (v0.1.0)
+│
+├── 📂 app/                         # Next.js App Router
+│   ├── 📂 home/
+│   │   └── page.tsx               # Dashboard principal
+│   ├── 📂 onboarding/
+│   │   └── page.tsx               # Flujo de bienvenida
+│   ├── 📂 profile/
+│   │   └── page.tsx               # Perfil de usuario
+│   ├── 📂 routine/
+│   │   └── page.tsx               # Rutinas de entrenamiento
+│   ├── layout.tsx                 # Layout raíz con navegación
+│   ├── page.tsx                   # Página de entrada (redirect)
+│   ├── globals.css                # Estilos globales + Tailwind
+│   └── favicon.ico                # Icono de la app
+│
+├── 📂 components/                  # Componentes React reutilizables
+│   └── bottom-navigation.tsx      # Barra de navegación inferior
+│
+├── 📂 lib/                        # Utilidades y lógica compartida
+│   └── index.ts                   # (Preparado para funciones)
+│
+├── 📂 types/                      # Definiciones TypeScript
+│   └── index.ts                   # (Preparado para tipos globales)
+│
+├── 📂 docs/                       # Documentación técnica
+│   └── SETUP.md                   # Guía de setup detallada
+│
+├── 📂 public/                     # Archivos estáticos
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+│
+├── 📂 .vscode/                    # Configuración VS Code
+│   ├── settings.json              # Settings del editor
+│   └── extensions.json            # Extensiones recomendadas
+│
+├── 📄 package.json                # Dependencias (Next.js + React + TS)
+├── 📄 tsconfig.json               # Configuración TypeScript
+├── 📄 next.config.ts              # Configuración Next.js
+├── 📄 postcss.config.mjs          # Configuración PostCSS
+├── 📄 eslint.config.mjs           # Configuración ESLint
+├── 📄 pnpm-lock.yaml              # Lock file de pnpm
+├── 📄 pnpm-workspace.yaml         # Workspace de pnpm
+├── 📄 next-env.d.ts               # Types de Next.js (auto-generado)
+├── 📄 .gitignore                  # Archivos ignorados por Git
+│
+├── 📖 README.md                   # Documentación principal
+├── 📋 CHECKLIST.md                # Checklist del MVP (todos ✅)
+├── 📊 SUMMARY.md                  # Resumen ejecutivo del setup
+└── 🌳 PROJECT_TREE.txt            # Este archivo
+
+═══════════════════════════════════════════════════════════════
+
+📊 ESTADÍSTICAS
+─────────────────
+• Archivos de código:    7 (.tsx/.ts)
+• Líneas de código:      ~126 líneas
+• Rutas implementadas:   5 páginas
+• Componentes:           1 (BottomNavigation)
+• Documentos:            4 archivos
+• Dependencias prod:     3 paquetes
+• Dependencias dev:      8 paquetes
+
+🛠️ STACK
+─────────────────
+• Next.js      → 16.1.1
+• React        → 19.2.3
+• TypeScript   → 5.9.3
+• Tailwind CSS → 4.1.18
+• pnpm         → 10.23.0
+
+✅ ESTADO
+─────────────────
+• Build:       ✅ Exitoso
+• Linting:     ✅ Sin errores
+• TypeScript:  ✅ Compilando
+• Dev Server:  ✅ Funcionando
+
+🚀 COMANDOS
+─────────────────
+• pnpm dev     → Servidor de desarrollo
+• pnpm build   → Build de producción
+• pnpm start   → Servidor de producción
+• pnpm lint    → Ejecutar ESLint
+
+═══════════════════════════════════════════════════════════════
+
+💪 Fierro - Tu compañero de fitness impulsado por IA
+
+Setup completado el 13 de Enero, 2026
+Listo para la Fase 2: Implementación de UI
